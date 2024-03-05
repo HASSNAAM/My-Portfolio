@@ -37,7 +37,6 @@ body {
 .page {
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 10px;
 }
 aside {
   background-color: var(--alt-color);
@@ -78,33 +77,6 @@ aside a i {
   font-size: 28px;
   padding-top: 4px;
 }
-@media (max-width: 991px) {
-  h1 {
-    display: none;
-  }
-  .page {
-    grid-template-columns: auto 1fr;
-  }
-  aside {
-    width: 100px !important;
-    overflow-x: hidden;
-    transition: var(--transition);
-    min-height: 100vh;
-  }
-  aside ul li {
-    height: 70px;
-  }
-  aside ul li a h2 {
-    padding-top: 5px;
-  }
-  aside a i {
-    font-size: 35px;
-    margin-right: 35px;
-  }
-  aside:hover {
-    width: 300px !important;
-  }
-}
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -119,6 +91,9 @@ a {
   margin-bottom: 20px;
   text-shadow: var(--text-shadow);
   transition: var(--transition);
+}
+.information{
+  margin-top: 30px;
 }
 .information a {
   display: flex;
@@ -161,4 +136,41 @@ a {
 }
 p {
   text-shadow: var(--text-shadow);
+}
+.courses br{
+  display: none;
+}
+@media (max-width: 991px) {
+  .courses br{
+  display: block;
+}
+  .container{
+    padding: 10px 0 0 0;
+    overflow: hidden;
+  }
+  h1 {
+    display: none;
+  }
+  .page {
+    grid-template-columns: auto auto;
+  }
+  aside {
+    width: 100px !important;
+    overflow-x: hidden;
+    transition: var(--transition);
+    min-height: 100vh;
+  }
+  aside ul li {
+    height: 70px;
+  }
+  aside ul li a h2 {
+    padding-top: 5px;
+  }
+  aside a i {
+    font-size: 35px;
+    margin-right: 35px;
+  }
+  aside:hover {
+    width: 300px !important;
+  }
 }
